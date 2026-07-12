@@ -6,10 +6,13 @@ repositories {
     mavenCentral()
 }
 
-dependencies {}
+dependencies {
+    testImplementation("org.junit.jupiter:junit-jupiter:6.1.2")
+    testRuntimeOnly("org.junit.platform:junit-platform-launcher")
+}
 
 
-tasks.withType(JavaCompile) {
+tasks.withType(JavaCompile).configureEach {
     options.encoding = 'UTF-8'
 }
 
